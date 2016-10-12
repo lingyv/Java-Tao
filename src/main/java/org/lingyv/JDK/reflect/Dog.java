@@ -1,8 +1,8 @@
 package org.lingyv.JDK.reflect;
 
 public class Dog {
-    private String name;
-    private String colour;
+    public String name;
+    public String colour;
     private int age;
 
     public void bark() {
