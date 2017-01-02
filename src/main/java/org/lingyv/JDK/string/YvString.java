@@ -53,7 +53,7 @@ public class YvString {
         /*
         这条语句创建了2个对象
         考虑类加载阶段和实际执行时:
-        （1）类加载对一个类只会进行一次。"abc"在类加载时就已经创建并驻留了（如果该类被加载之前已经有"abc"字符串被驻留过则不需要重复创建用于驻留的"xyz"实例）。驻留的字符串是放在全局共享的字符串常量池中的。
+        （1）类加载对一个类只会进行一次。"abc"在类加载时就已经创建并驻留了（如果该类被加载之前已经有"abc"字符串被驻留过则不需要重复创建用于驻留的"abc"实例）。驻留的字符串是放在全局共享的字符串常量池中的。
         （2）在这段代码后续被运行的时候，"abc"字面量对应的String实例已经固定了，不会再被重复创建。所以这段代码将常量池中的对象复制一份放到heap中，并且把heap中的这个对象的引用交给ss持有。
          */
 
@@ -71,6 +71,7 @@ public class YvString {
      */
     private static void changeString(String s) {
         s = "def";
+        int i = 10;
     }
 
     private static void change() {
@@ -80,8 +81,9 @@ public class YvString {
     }
 
     public static void main(String[] args) {
-        constantPool();
-        change();
+        //constantPool();
+        //change();
+        System.out.println("Hello World!");
     }
 
 }
