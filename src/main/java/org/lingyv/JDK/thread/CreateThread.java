@@ -8,6 +8,18 @@ package org.lingyv.JDK.thread;
 public class CreateThread {
 
     /**
+     * 使用lambda
+     */
+    private static void lambdaThread() {
+        Thread thread = new Thread(() -> {
+            for (String s : Resume.res) {
+                System.out.println(s);
+            }
+        });
+        thread.start();
+    }
+
+    /**
      * 创建Runnable接口的实现类
      */
     private static void impRunnable() {
