@@ -78,7 +78,7 @@ public class YvMethod {
 
     public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         Method method = yvGetMethod(Dog.class, "bark", null);
-        yvInvokeMethod(method,new Dog(),null);
+        yvInvokeMethod(method, new Dog(), null);
 
     }
 }

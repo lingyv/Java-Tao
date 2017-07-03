@@ -10,7 +10,7 @@ package org.lingyv.JDK.annotation;
  * DK 5中引入了源代码中的注解（annotation）这一机制。注解使得Java源代码中不但可以包含功能性的实现代码，
  * 还可以添加元数据。注解的功能类似于代码中的注释，所不同的是注解不是提供代码功能的说明，
  * 而是实现程序功能的重要组成部分。Java注解已经在很多框架中得到了广泛的使用，用来简化程序中的配置。
- *(-->  http://www.infoq.com/cn/articles/cf-java-annotation)
+ * (-->  http://www.infoq.com/cn/articles/cf-java-annotation)
  */
 
 import java.lang.annotation.ElementType;

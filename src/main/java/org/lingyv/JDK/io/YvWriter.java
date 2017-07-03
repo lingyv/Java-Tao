@@ -40,10 +40,11 @@ public class YvWriter {
     /**
      * 将数据写入文件
      * 如果文件不存在，则创建文件
+     *
      * @param dirPath
      * @param fileName
      * @param fileContent
-     * @param append  --> 是否保留原文件内容
+     * @param append      --> 是否保留原文件内容
      * @return
      * @throws IOException
      */
@@ -51,9 +52,7 @@ public class YvWriter {
         boolean result = false;
         if (createDir(dirPath)) {
             String filePath = dirPath + "/" + fileName;
-            try (FileWriter fileWriter = new FileWriter(filePath,append);
-                 BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
-                 PrintWriter writer = new PrintWriter(bufferedWriter)) {
+            try (PrintWriter writer = new PrintWriter(filePath, "UTF-8")) {
                 if (fileContent != null && !fileContent.isEmpty()) {
                     for (String content : fileContent) {
                         writer.println(content);
@@ -82,9 +81,9 @@ public class YvWriter {
     public static void main(String[] args) throws IOException {
         List<String> content = new ArrayList<>();
         for (int i = 0; i < 20; i++) {
-            content.add(""+i);
+            content.add("" + i);
         }
 
-        fileAppend("D:\\conf\\abc","vim快捷键.java",content);
+        fileAppend("D:\\conf\\abc", "vim快捷键.java", content);
     }
 }
